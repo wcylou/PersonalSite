@@ -37,15 +37,15 @@ table {
 
 html, body {
   font-size: 12px;
-  height: 100%;
-  width: 100%;
+  height: 100% !important;
+  width: 100% !important;
   margin: 0;
   padding: 0;
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  margin: 0 !important;
+  padding: 0 !important;
   background: white;
   font-family: "Lato", serif;
   overflow-x: hidden;
@@ -61,7 +61,7 @@ li {
   font-size: 2.4em;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  margin: 1em 0 2em 0;
+  margin: 0.2em 0 3em 0;
   font-family: "Roboto";
 }
 
@@ -116,6 +116,7 @@ li {
   text-transform: uppercase;
   background-color: white;
   letter-spacing: 0.1em;
+  width: 100% !important;
 }
 
 #mainNav .navbar-toggler {
@@ -131,7 +132,7 @@ li {
   font-size: 2em;
   padding-left: 3em;
   color: rgba(0, 0, 0, 0.6);
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8), 0px -5px 35px rgba(255, 255, 255, 0.3);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8), 0px -5px 35px rgba(255, 255, 255, 0.1);
 }
 
 #mainNav a {
@@ -151,7 +152,7 @@ li {
 
 .navbar-nav a:hover, .navbar-nav a:focus {
   color: rgb(209, 4, 99) !important;
-  border: 1px rgb(209, 4, 99) solid;
+  border: 0.05px rgb(209, 4, 99) solid;
 }
 
 /** Intro-section*/
@@ -257,13 +258,14 @@ li {
 #about-content, #portfolio-section {
   text-align: center;
   padding-bottom: 6em;
-  color:white;
+  padding-right: 2em;
+  color: white;
 }
 
 #resume-section {
   text-align: center;
   padding-bottom: 6em;
-  color:black;
+  color: black;
 }
 
 .about-section p {
@@ -278,8 +280,8 @@ li {
   font-style: italic;
 }
 
-#about #aboutme {
-  font-size: 2.4em;
+#aboutme {
+  font-size: 2.4em !important;
   color: hotpink;
 }
 
@@ -289,7 +291,7 @@ li {
   .about-section p {
     font-size: 1.4em;
     padding-left: 2em;
-    padding-right: 2em;
+    padding-right: 1em;
   }
 }
 
@@ -297,7 +299,9 @@ li {
   .about-section p {
     font-size: 1.1em;
     padding-left: 2em;
-    padding-right: 2em;
+  }
+  .about-me {
+    margin-right: 1.4em;
   }
 }
 
@@ -343,6 +347,7 @@ li {
   padding-top: 0.2em;
   margin-left: 43%;
   padding-left: 60px;
+  margin-right: 2%;
 }
 
 #resume .timeline-content h4 {
@@ -365,6 +370,9 @@ li {
     width: 4em;
     left: 43.5%;
   }
+  #resume .timeline-content {
+    margin-right: 5%;
+  }
   #resume .timeline-header h2 {
     font-size: 1.7em;
     padding-top: 0.1em;
@@ -375,15 +383,18 @@ li {
   }
   #resume .timeline-content h4 {
     font-size: 1.3em;
-    color: rgb(216, 216, 216);
+    color: black;
   }
   #resume .timeline-content p {
     font-size: 1em;
-    color: rgb(152, 152, 152);
+    color: rgb(120, 120, 120);
   }
 }
 
 @media only screen and (max-width:768px) {
+  #resume .timeline-content {
+    margin-right: 5%;
+  }
   #resume .timeline-ico {
     height: 4em;
     width: 4em;
@@ -392,15 +403,28 @@ li {
     padding: 3px;
     left: 41.5%;
   }
-}
-
-#resume .timeline-content {
-  padding-right: 2em;
+  #resume .timeline-content h4 {
+    font-size: 1.2em;
+    color: black;
+  }
+  #resume .timeline-content p {
+    font-size: 1em;
+    color: rgb(120, 120, 120);
+  }
 }
 
 @media only screen and (max-width:480px) {
   #resume .timeline-content {
     padding-right: 2em;
+    color: rgb(216, 216, 216);
+  }
+  #resume .timeline-content h4 {
+    font-size: 1.1em;
+    color: black;
+  }
+  #resume .timeline-content p {
+    font-size: 1em;
+    color: rgb(120, 120, 120);
   }
 }
 
@@ -458,9 +482,9 @@ li {
   font-size: 2.2em;
 }
 
-/**Responsive work and education*/
+/**End Technology*/
+/**Portfolio**/
 
-/**End responsive work and education*/
 .grid {
   display: grid;
   grid-gap: 10px;
@@ -473,7 +497,6 @@ li {
 }
 
 /*Shine Effect**/
-
 .grid .content .title .effect-shine h3:hover {
   -webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, .6) 30%, #000 50%, rgba(0, 0, 0, .6) 70%);
   -webkit-mask-size: 200%;
@@ -488,14 +511,8 @@ li {
     -webkit-mask-position: -50%;
   }
 }
-
-m: scale(1);
-}
-
 /*End Shine Effect*/
-
 /**Responsive Grid*/
-
 .item {
   background-color: black;
 }
@@ -505,16 +522,20 @@ m: scale(1);
   height: 100%;
 }
 
-.title !important {
-  padding-top: 20px
+.title {
+  padding: 1em 0em 1em 0em;
 }
 
 .title h3 {
-  font-size: 2em;
+  font-size: 1.6em;
   color: white;
   text-transform: uppercase;
   text-align: center;
-  padding: 0.8em;
+}
+
+.title span {
+  font-size: 1.3em;
+  color: hotpink;
 }
 
 .project .title {
@@ -550,7 +571,7 @@ m: scale(1);
 
 .thumbnail:hover {
   background-color: transparent;
-  z-index: 2em;
+  z-index: 1;
 }
 
 .thumbnail span {
@@ -570,8 +591,8 @@ m: scale(1);
 }
 
 .thumbnail:hover span {
-  visibility:visible;
-  top: 70px;
+  visibility: visible;
+  top: 1em;
   left: 100px;
 }
 
@@ -583,13 +604,11 @@ m: scale(1);
 }
 
 #footer li {
-  margin-right: 1em;
+  padding-right: 3em;
 }
 
 .contact-buttons {
-  position: relative;
-  left: 50%;
-  margin-left: -185px;
+  justify-content: center;
 }
 
 .fa-envelope, .fa-github, .fa-linkedin, .fa-file-pdf {
@@ -617,7 +636,7 @@ m: scale(1);
   color: lightgray;
   font-size: 1.4em;
   text-align: center;
-  padding-top: 1em;
+  padding-top: 0.5em;
 }
 
 #footer h3 {
